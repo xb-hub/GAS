@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "AuraCharacterBase.h"
+#include "GAS/Character/AuraCharacterBase.h"
 #include "AuraCharacter.generated.h"
 
 /**
@@ -13,5 +13,7 @@ UCLASS()
 class GAS_API AAuraCharacter : public AAuraCharacterBase
 {
 	GENERATED_BODY()
-	
+
+public:
+	AAuraCharacter();
 };
