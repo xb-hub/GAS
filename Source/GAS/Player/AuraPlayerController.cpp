@@ -43,7 +43,7 @@ void AAuraPlayerController::PlayerTick(float DeltaTime)
 void AAuraPlayerController::CursorTrace()
 {
 	FHitResult CursorTraceHit;
-	GetHitResultUnderCursor(ECollisionChannel::ECC_Visibility, false, CursorTraceHit);
+	GetHitResultUnderCursor(ECC_Visibility, false, CursorTraceHit);
 	if (CursorTraceHit.bBlockingHit)
 	{
 		LastActor = CurrentActor;
