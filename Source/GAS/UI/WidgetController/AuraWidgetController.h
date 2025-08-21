@@ -29,6 +29,8 @@ public:
 	void InitWidgetController(APlayerController* PC, APlayerState* PS, UAbilitySystemComponent* ASC, UAttributeSet* AS);
 
 	virtual void BroadCastInitialValues();
+
+	virtual void BroadCastValueChange();
 protected:
 	UPROPERTY(BlueprintReadOnly, Category="AuraWidgetController")
 	TObjectPtr<APlayerController> PlayerController;

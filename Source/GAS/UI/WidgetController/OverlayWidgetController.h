@@ -14,13 +14,14 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnMaxManaChange, float, NewMaxMana)
 /**
  * 
  */
-UCLASS(BlueprintType)
+UCLASS()
 class GAS_API UOverlayWidgetController : public UAuraWidgetController
 {
 	GENERATED_BODY()
 
 public:
 	virtual void BroadCastInitialValues() override;
+	virtual void BroadCastValueChange() override;
 
 	UPROPERTY(BlueprintAssignable, Category = "GAS|Attributes")
 	FOnHealthChange OnHealthChange;
@@ -33,4 +34,10 @@ public:
 
 	UPROPERTY(BlueprintAssignable, Category = "GAS|Attributes")
 	FOnMaxManaChange OnMaxManaChange;
+
+private:
+	void OnHealthValueChange(const FOnAttributeChangeData& Data) const;
+	void OnMaxHealthValueChange(const FOnAttributeChangeData& Data) const;
+	void OnManaValueChange(const FOnAttributeChangeData& Data) const;
+	void OnMaxManaValueChange(const FOnAttributeChangeData& Data) const;
 };

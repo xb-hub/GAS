@@ -15,3 +15,7 @@ void UAuraWidgetController::InitWidgetController(APlayerController* PC, APlayerS
 void UAuraWidgetController::BroadCastInitialValues()
 {
 }
+
+void UAuraWidgetController::BroadCastValueChange()
+{
+}
